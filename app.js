@@ -43,7 +43,7 @@ class Handlers {
     var destfiles = [];
     for (var i = 0; i < yamlfiles.length; i++) {
       if (yamlfiles[i].endsWith('.html')) {
-        destfiles.push(yamlfiles[i]);
+        destfiles.push('- url: ' + yamlfiles[i] + '\n');
       }
     }
 
@@ -77,8 +77,8 @@ class Handlers {
     var handlerstructure = [];
     handlerstructure.push('runtime: nodejs');
     handlerstructure.push('env: flex');
-    handlerstructure.push('\nhandlers:');
-    handlerstructure.push('- url:', appyamlcontents.join('\n') );
+    handlerstructure.push('\nhandlers:\n');
+    handlerstructure.push(appyamlcontents.join('\n') );
 
     fs.writeFile('app.yaml', handlerstructure.join('\n'), (err) => {
       if (err) throw err;

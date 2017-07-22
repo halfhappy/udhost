@@ -4,8 +4,7 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
-// TODO: Change this to npm (remove local) before launch
-const Compile = require('../udmdcompiler');
+const Compile = require('udmdcompiler');
 const comp = new Compile();
 
 // Run the markdown compiler

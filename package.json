@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jamiekpac/udhost#readme",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "udmdcompiler": "^1.0.1"
   }
 }

@@ -78,7 +78,7 @@ class Handlers {
     handlerstructure.push('runtime: nodejs');
     handlerstructure.push('env: flex');
     handlerstructure.push('\nhandlers:');
-    handlerstructure.push( appyamlcontents.join('\n') );
+    handlerstructure.push('- url:', appyamlcontents.join('\n') );
 
     fs.writeFile('app.yaml', handlerstructure.join('\n'), (err) => {
       if (err) throw err;
